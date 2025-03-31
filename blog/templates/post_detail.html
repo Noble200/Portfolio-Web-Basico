@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="text-center py-5" style="background-color: #222; color: white; border-radius: 10px;">
+
+    <h1 class="display-4 font-weight-bold">{{ post.title }}</h1>
+    <h2 class="my-2 h5 text-light">{{ post.date|date:'F jS Y' }}</h2>
+
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid rounded shadow-lg mt-4">
+
+    <div class="my-4 px-3 text-justify" style="line-height: 1.8; font-size: 1.1rem;">
+        {{ post.description|safe }}
+    </div>
+
+</div>
+
+{% endblock %}
